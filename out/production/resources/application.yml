@@ -1,0 +1,37 @@
+server:
+  port: 8081
+
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+spring:
+  application:
+    name: posts-service
+  jpa:
+    show_sql: true
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  profiles:
+    include: oauth
+  session:
+    store-type: jdbc
