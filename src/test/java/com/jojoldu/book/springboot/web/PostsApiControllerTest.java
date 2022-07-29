@@ -17,7 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 //import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.*;
+//import org.springframework.http.*;
+import org.springframework.http.HttpEntity;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -25,7 +26,7 @@ import org.springframework.test.web.servlet.MockMvcBuilder;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
 
-
+import javax.ws.rs.core.MediaType;
 
 import java.util.List;
 
@@ -56,12 +57,12 @@ class PostsApiControllerTest {
 
     @Before
     public void setup() {
-//        log.info("<<<<<<<<<<<<<<시작");
+        log.info("<<<<<<<<<<<<<<시작");
         mvc = MockMvcBuilders
                 .webAppContextSetup(context)
                 .apply(springSecurity())
                 .build();
-//        log.info("<<<<<<<<<<<<<<시작{}",mvc);
+        log.info("<<<<<<<<<<<<<<시작{}",mvc);
         System.out.println("mvc!!!!!!!!!!!!! = " + mvc);
     }
 
