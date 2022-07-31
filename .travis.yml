@@ -1,0 +1,18 @@
+language: java # 언어는 java
+jdk:
+  - openjdk11 # node_js에 버전 10.14
+branches:
+  only:
+    - master
+# Travis CI서버의 Home
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+script: "./gradlew clean build -x"
+
+# CI 실행 완료시 메일로 알람.
+notifications: # 성공 실패 여부 알림
+  email:
+    recipients:
+      - emuce@naver.com
