@@ -6,6 +6,9 @@ branches:
   only:
     - master
 
+before_install:
+  - chomod +x gradlew
+
 # Travis CI서버의 Home
 cache:
   directories:
