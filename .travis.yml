@@ -9,7 +9,7 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
-script: "./gradlew clean build -x"
+script: "./gradlew clean build"
 
 # CI 실행 완료시 메일로 알람.
 notifications: # 성공 실패 여부 알림
