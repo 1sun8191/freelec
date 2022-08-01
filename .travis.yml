@@ -14,7 +14,7 @@ cache:
   directories:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
-script: "./gradlew clean build -x"
+script: "./gradlew clean build"
 
 before_deploy:
   - zip -r freelec-springboot2-webservice *
