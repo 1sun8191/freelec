@@ -30,7 +30,7 @@ do
   if [ ${RETRY_COUNT} -eq 10 ]
   then
       echo "> Health check 실패."
-      echo "> 엔진엑스에 연결하지 않고 배포를 종료합니다."
+      echo "> 엔진엑스에 연결하지 않고 배포를 종료합니다."f
       exit 1
   fi
 
