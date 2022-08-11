@@ -1,0 +1,13 @@
+server:
+  port: 8083
+
+spring:
+  profiles:
+    include: oauth,real-db
+  session:
+    store-type: jdbc
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
