@@ -5,12 +5,15 @@
 function find_idle_profile()
 {
   RESPONSE_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost/profile)
+  echo "<<<<>>>>>RESPONSE_CODE = $RESPONSE_CODE"
 
   if [ ${RESPONSE_CODE} -ge 400 ]
   then
     CURRENT_PROFILE=real2
+    echo "<<<<>>>>>CURRENT_PROFILE111 = $CURRENT_PROFILE"
   else
     CURRENT_PROFILE=$(curl -s http://localhost/profile)
+    echo "<<<<>>>>>CURRENT_PROFILE222 = $CURRENT_PROFILE"
   fi
 
   if [ ${CURRENT_PROFILE} == real1 ]
